@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="/assets/css/main.css" type="text/css">
+	<title>アンケートフォーム</title>
+<!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+  <div class="navbar-header">
+    <!-- 横幅が狭い時に出るハンバーガーボタン -->
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    </button>
+
+    <!-- ホームへ戻るリンク。ブランドロゴなどを置く。 -->
+    <a class="navbar-brand" href="#">おとぷろ</a>
+  </div>
+
+  <!-- メニュー項目 -->
+  <div id="navbar" class="collapse navbar-collapse otopuro">
+    <ul class="nav navbar-nav">
+    <li class="active"><a href="#">ブログ</a></li>
+    <li><a href="#">新規登録</a></li>
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">ログイン<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+      <li><a href="#">マイページ</a></li>
+      <li><a href="#">質問一覧</a></li>
+      <li><a href="#">メモ</a></li>
+      <li><a href="#">？？</a></li>
+      </ul>
+    </li>
+    <li><a href="#">お問い合わせ</a></li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+	<div class="row">
+	  <div class="col-lg-3 col-lg-offset-0">
+
+  <table class="table table-hover">
+	<thead>
+    <tr>
+      <th scope="col">カテゴリ</th>
+    </tr>
+  </thead>
+  <tbody>
+	  <tr>
+      <th scope="col">DAW</th>
+    </tr>
+    <tr>
+      <td>Ableton Live</td>
+    </tr>
+    <tr>
+      <td>Logic Pro X</td>
+    </tr>
+    <tr>
+      <td>Pro Tools</td>
+    </tr>
+    <tr>
+      <td>cubase</td>
+    </tr>
+    <tr>
+      <td>FL Studio</td>
+    </tr>
+    <tr>
+      <td>Studio One</td>
+    </tr>
+    <tr>
+      <td>Reason</td>
+    </tr>
+    <tr>
+      <td>Reaper</td>
+    </tr>
+    <tr>
+      <td>その他</td>
+    </tr>
+  </tbody>
+</table>
+
+		</div>
+
+	  <div class="col-lg-6 col-lg-offset-0">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+
+				<span class="glyphicon glyphicon-triangle-right"></span>
+				質問投稿フォーム
+			</div>
+
+			<div class="panel-body">
+				<form action="/answers" method="post">
+
+					<div class="form-group">質問内容<br>
+						<textarea name="content" rows="4" cols="40"></textarea>
+					</div>
+
+					<div class="form-group">
+						カテゴリ<br>
+
+						<select name="grade">
+							<option value="1">１</option>
+							<option value="2">２</option>
+							<option value="3">３</option>
+							<option value="4">４</option>
+							<option value="5">５</option>
+							<option value="6">６</option>
+						</select>
+					</div>
+
+					<div class="form-group">
+						使用ソフト<br>
+
+						<select name="grade">
+							<option value="1">Ableton Live</option>
+							<option value="2">Logic Pro X</option>
+							<option value="3">Pro Tools</option>
+							<option value="4">cubase</option>
+							<option value="5">FL Studio</option>
+							<option value="6">Reason</option>
+              <option value="7">Reaper</option>
+              <option value="8">その他</option>
+						</select>
+					</div>
+
+					<div class="form-group">
+						公開設定<br>
+						<input type="radio" name="setting" value="man" checked >公開
+						<input type="radio" name="setting" value="woman">非公開
+					</div>
+
+					<div class="form-group">
+						(非公開の場合)パスワード<br>
+
+						<input type="password" name="password" maxlength="10" minlength="6" placeholder="パスワードを入力" required ><br>
+					</div>
+
+					<input type="submit" class="btn btn-primary pull-left"></input>
+					<input type="reset" class="btn btn-warning pull-left"></input>
+				</form>
+
+			</div>
+		</div>
+	  </div>
+
+	<div class="row">
+	  <div class="col-lg-3 col-lg-offset-0">
+
+  <table class="table table-hover">
+	<thead>
+    <tr>
+      <th scope="col">人気投稿</th>
+    </tr>
+		    <tr>
+      <th scope="col">DAW一覧</th>
+    </tr>
+  </thead>
+  <tbody>
+	  <tr>
+		  <th scope="col">〜〜〜</th>
+		</tr>
+  </tbody>
+		<thead>
+    <tr>
+      <th scope="col"><br>人気投稿</th>
+    </tr>
+  </thead>
+</table>
+
+		</div>
+	 </div>
+</body>
+</html>
