@@ -6,6 +6,8 @@ gem 'sinatra-contrib'
 
 gem 'rake'
 gem 'sinatra-activerecord'
+gem 'activerecord'
+gem 'bcrypt'
 
 group :development do
     gem 'sqlite3' , '~>1.3.13'

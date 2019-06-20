@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="/assets/css/main.css" type="text/css">
 	<title>アンケートフォーム</title>
@@ -32,16 +31,28 @@
   <div id="navbar" class="collapse navbar-collapse otopuro">
     <ul class="nav navbar-nav">
     <li class="active"><a href="#">ブログ</a></li>
-    <li><a href="#">新規登録</a></li>
+    <% unless session[:user] %>
+    <li><a href="/signup">新規登録</a></li>
     <li class="dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown">ログイン<span class="caret"></span></a>
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">アカウント<span class="caret"></span></a>
       <ul class="dropdown-menu">
-      <li><a href="#">マイページ</a></li>
+      <li><a href="/signin">ログイン</a></li>
       <li><a href="#">質問一覧</a></li>
       <li><a href="#">メモ</a></li>
       <li><a href="#">？？</a></li>
       </ul>
     </li>
+    <% else %>
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">アカウント<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+      <li><a href="/signout">ログアウト</a></li>
+      <li><a href="#">質問一覧</a></li>
+      <li><a href="#">メモ</a></li>
+      <li><a href="#">？？</a></li>
+      </ul>
+    </li>
+    <% end %>
     <li><a href="#">お問い合わせ</a></li>
     </ul>
   </div><!-- /.navbar-collapse -->
