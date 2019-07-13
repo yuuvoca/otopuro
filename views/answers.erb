@@ -1,47 +1,21 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <title>アンケートフォーム|回答結果</title>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-</head>
-<body>
-    <a href="/">トップへ戻る</a>
-
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-        <div class="panel panel-default">
-            <div class="panel-heading"><span class="glyphicon glyphicon-triangle-right"></span>回答一覧</div>
-            <table class="table">
+<div>
+  <div>
+    <div>
+      <table>
+        <thead>
+          <tr>
+           <th>質問内容</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @posts.each do |post| %>
             <tr>
-                <th>名前</th>
-                <th>年齢</th>
-                <th>学年</th>
-                <th>性別</th>
-                <th>日付</th>
-                <th>メールアドレス</th>
-                <th>パスワード</th>
-                <th>問い合わせ内容</th>
+              <td><%= post.title %></td>
             </tr>
-            <% @answers.each do |answer| %>
-            <tr>
-                <td><%= answer.name %></td>
-                <td><%= answer.age %></td>
-                <td><%= answer.grade %></td>
-                <td><%= answer.gender %></td>
-                <td><%= answer.date %></td>
-                <td><%= answer.email %></td>
-                <td><%= answer.password %></td>
-                <td><%= answer.content %></td>
-            </tr>
-            <% end %>
-        </table>
-            <div class="panel-body">
-            </div>
-        </div>
-        </div>
+          <% end %>
+          <tr><td colspan="6"><a href="a">しつもん</a></td></tr>
+        </tbody>
+      </table>
     </div>
-</body>
-</html>
+  </div>
+</div>

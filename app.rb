@@ -5,6 +5,8 @@ require 'sinatra/reloader' if development?
 require 'sinatra/activerecord'
 require './models'
 
+enable :sessions
+
 get '/' do
 erb :index
 end
@@ -24,7 +26,7 @@ post '/answers' do
 end
 
 get '/answers' do
-    @answers =Answer.all
+    @answer = Answer.all
     erb :answers
 end
 
@@ -34,6 +36,10 @@ end
 
 get '/signup' do
     erb :sign_up
+end
+
+get '/information' do
+    erb :information
 end
 
 post '/signin' do
@@ -54,5 +60,10 @@ end
 
 get '/signout' do
     session[:user] = nil
+    redirect '/'
+end
+
+post '/posts' do
+    current_user.tasks.create(title: params[:title])
     redirect '/'
 end
