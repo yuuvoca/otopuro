@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
     has_secure_password
     validates :mail,
       presence: true,
-      format: {with:/ .+@.+/}
+      format: {with:/.+@.+/}
     validates :password,
       length: {in: 5..10}
     has_many :posts

@@ -12,9 +12,47 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+  <div class="navbar-header">
+    <!-- 横幅が狭い時に出るハンバーガーボタン -->
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    </button>
+
+    <!-- ホームへ戻るリンク。ブランドロゴなどを置く。 -->
+    <a class="navbar-brand" href="#">おとぷろ</a>
+  </div>
+
+  <!-- メニュー項目 -->
+  <div id="navbar" class="collapse navbar-collapse otopuro">
+    <ul class="nav navbar-nav">
+    <li class="active"><a href="http://blog.livedoor.jp/otopuro_music/">おとぷろブログ</a></li>
+    <% unless session[:user] %>
+    <li><a href="/signup">新規登録</a></li>
+    <li><a href="/signin">ログイン</a></li>
+    <% else %>
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">ログアウト<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+      <li><a href="/signout">マイページ</a></li>
+      <li><a href="#">質問一覧</a></li>
+      <li><a href="#">メモ</a></li>
+      </ul>
+    </li>
+    <% end %>
+    <li><a href="/information">お問い合わせ</a></li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 <form action="/signup" method="post">
   <input type="text" name="mail" placeholder="Eメール"><br>
   <input type="password" name="password" placeholder="パスワード"><br>
   <input type="password" name="password_confirmation" placeholder="パスワードの確認"><br>
   <input type="submit" value="新規登録">
 </form>
+</body>

@@ -7,8 +7,19 @@ require './models'
 
 enable :sessions
 
+helpers do
+    def current_user
+        User.find_by(id: session[:user])
+    end
+end
+
 get '/' do
-erb :index
+  if current_user.nil?
+    @posts = Post.none
+  else
+    @posts = current_user.posts
+  end
+  erb :index
 end
 
 post '/answers' do
@@ -45,16 +56,18 @@ end
 post '/signin' do
     user = User.find_by(mail: params[:mail])
     if user && user.authenticate(params[:password])
-        session[:user] = user.id
+      session[:user] = user.id
     end
+    binding.pry
     redirect '/'
 end
 
 post '/signup' do
     @user = User.create(mail:params[:mail],password:params[:password],password_confirmation:params[:password_confirmation])
     if @user.persisted?
-        session[:user] = @user.id
+      session[:user] = @user.id
     end
+    binding.pry
     redirect '/'
 end
 

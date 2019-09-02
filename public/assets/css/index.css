@@ -1,9 +1,42 @@
+@font-face {
+	font-family: 'waon';
+    src: url('WaonJoyo-R.otf') format('otf');
+}
+
 body{
-  background-color: #e0ffff;  font-family: 'Hiragino Maru Gothic Pro';
+  background-color: #e0ffff; font-family: "waon"
 }
 #navbar{
   color: #e0ffff;
 }
 #form{
-  background-color: #fff0f5
+  background-color: #ffffff;
+}
+
+.table > tbody > tr > td {
+  font-size: 14px; padding: 25px;
+}
+
+.table > tbody > tr > th {
+  font-size: 16px; padding: 25px;
+}
+
+.table > thead > tr > th {
+  font-size: 18px; padding: 30px;
+ }
+
+.panel-default > .panel-heading {
+  font-size: 20px
+}
+
+.form-group {
+  margin-bottom: 20px; font-size: 20px;
+}
+
+select {
+  font-size: 15px; line-height: inherit;
+}
+
+textarea {
+  font-size: 15px; margin : 15px　5px　15px　5px;
 }
