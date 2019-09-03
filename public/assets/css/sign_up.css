@@ -1,3 +1,35 @@
 form{
   background-color: #e0ffff; font-size: 20px; text-align: center; font-family: serif;
 }
+
+@media (min-width: 768px){
+
+  .navbar {
+    margin-bottom: 0px;
+ }
+
+  .navbar-nav> li > a {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .navbar>.container .navbar-brand,
+  .navbar>.container-fluid .navbar-brand {
+    margin-left: -15px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .navbar-header {
+    margin-right: auto;
+  }
+
+  .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 0px;
+  }
+
+  .container-fluid>:first-child {
+    margin-right: auto;
+  }
+}

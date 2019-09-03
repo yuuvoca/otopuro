@@ -41,6 +41,10 @@ get '/answers' do
     erb :answers
 end
 
+get '/top' do
+  erb :index
+end
+
 get '/signin' do
     erb :sign_in
 end
