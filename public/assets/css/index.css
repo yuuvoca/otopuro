@@ -4,7 +4,8 @@
 }
 
 body{
-  background-color: #e0ffff; font-family: "waon";
+  background-color: #e0ffff;
+  font-family: "waon";
 }
 #navbar{
   color: #e0ffff;
@@ -14,15 +15,18 @@ body{
 }
 
 .table > tbody > tr > td {
-  font-size: 14px; padding: 25px;
+  font-size: 14px;
+  padding: 25px;
 }
 
 .table > tbody > tr > th {
-  font-size: 16px; padding: 25px;
+  font-size: 16px;
+  padding: 25px;
 }
 
 .table > thead > tr > th {
-  font-size: 18px; padding: 30px;
+  font-size: 18px;
+  padding: 30px;
  }
 
 .panel-default > .panel-heading {
@@ -30,15 +34,19 @@ body{
 }
 
 .form-group {
-  margin-bottom: 20px; font-size: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
 }
 
 select {
-  font-size: 15px; line-height: inherit;
+  font-size: 15px;
+  line-height: inherit;
 }
 
 textarea {
-  font-size: 15px; margin : 15px　5px　15px　5px;
+  font-size: 15px;
+  margin : 15px　5px　15px　5px;
+  width: 100%
 }
 
 @media (min-width: 768px) {
@@ -66,4 +74,32 @@ textarea {
   .container-fluid>:first-child {
     margin-right: auto;
   }
+}
+
+select {
+  height: 30px;
+}
+
+.btn-primary {
+    color: #000000;
+    background-color: #ffffff;
+    border-color: #121e29;
+}
+
+.btn-primary:hover {
+    color: #000000;
+    background-color: #ffffff;
+    border-color: #aebac5;
+}
+
+.btn-warning {
+    color: #000000;
+    background-color: #ffffff;
+    border-color: #121e29;
+}
+
+.btn-warning:hover {
+    color: #000000;
+    background-color: #ffffff;
+    border-color: #aebac5;
 }

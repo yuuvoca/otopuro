@@ -1,3 +1,37 @@
+@font-face {
+	font-family: 'waon';
+    src: url('/assets/font/WaonJoyo-R.otf');
+}
+
+body{
+  background-color: #e0ffff; font-family: "waon";
+}
+
+form{
+  background-color: #e0ffff; font-size: 20px; text-align: center; font-family: "waon";
+}
+
+.panel {
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+textarea {
+  width: 50%;
+  margin-top: 10px;
+}
+
+.form-group {
+    margin-bottom: 0px;
+}
+
+@media (min-width: 768px){
+
+  .navbar {
+    margin-bottom: 0px;
+ }
+
   .navbar-nav> li > a {
     padding-top: 25px;
     padding-bottom: 25px;
@@ -24,6 +58,35 @@
   }
 }
 
- .navbar {
-    margin-bottom: 0px;
- }
+.panel-body {
+    padding: 0px;
+    margin-top: 15px
+}
+
+.btn-primary {
+    color: #000000;
+    background-color: #ffffff;
+    border-color: #121e29;
+}
+
+.btn-primary:hover {
+    color: #000000;
+    background-color: #ffffff;
+    border-color: #aebac5;
+}
+
+.btn-warning {
+    color: #000000;
+    background-color: #ffffff;
+    border-color: #121e29;
+}
+
+.btn-warning:hover {
+    color: #000000;
+    background-color: #ffffff;
+    border-color: #aebac5;
+}
+
+.button {
+
+}

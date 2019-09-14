@@ -1,5 +1,14 @@
+@font-face {
+	font-family: 'waon';
+    src: url('/assets/font/WaonJoyo-R.otf');
+}
+
+body{
+  background-color: #e0ffff; font-family: "waon";
+}
+
 form{
-  background-color: #e0ffff; font-size: 20px; text-align: center; font-family: serif;
+  background-color: #e0ffff; font-size: 20px; text-align: center; font-family: "waon";
 }
 
 @media (min-width: 768px){
@@ -36,3 +45,7 @@ form{
  .navbar {
     margin-bottom: 0px;
  }
+
+ input {
+  margin-top: 5px;
+}
