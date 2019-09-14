@@ -37,7 +37,8 @@ post '/answers' do
 end
 
 get '/answers' do
-    @answer = Answer.all
+    p current_user
+    @posts = current_user.posts
     erb :answers
 end
 
@@ -62,7 +63,7 @@ post '/signin' do
     if user && user.authenticate(params[:password])
       session[:user] = user.id
     end
-    binding.pry
+
     redirect '/'
 end
 
@@ -71,7 +72,7 @@ post '/signup' do
     if @user.persisted?
       session[:user] = @user.id
     end
-    binding.pry
+
     redirect '/'
 end
 
@@ -81,6 +82,6 @@ get '/signout' do
 end
 
 post '/posts' do
-    current_user.tasks.create(title: params[:title])
+    current_user.posts.create(title: params[:title])
     redirect '/'
 end
