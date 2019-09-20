@@ -37,8 +37,8 @@ post '/answers' do
 end
 
 get '/answers' do
-    p current_user
     @posts = current_user.posts
+
     erb :answers
 end
 
@@ -82,6 +82,11 @@ get '/signout' do
 end
 
 post '/posts' do
-    current_user.posts.create(title: params[:title])
+    current_user.posts.create(
+        question: params[:question],
+        category: params[:category],
+        softname: params[:softname]
+    )
+
     redirect '/'
 end

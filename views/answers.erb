@@ -1,21 +1,63 @@
-<div>
-  <div>
-    <div>
-      <table>
-        <thead>
-          <tr>
-           <th>質問内容</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% @posts.each do |post| %>
-            <tr>
-              <td><%= post.title %></td>
-            </tr>
-          <% end %>
-          <tr><td colspan="6"><a href="a">しつもん</a></td></tr>
-        </tbody>
-      </table>
-    </div>
+<body>
+
+</body>
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>アンケートフォーム</title>
+<!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	  <link rel="stylesheet" href="/assets/css/sign_in.css" type="text/css">
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+  <div class="navbar-header">
+    <!-- 横幅が狭い時に出るハンバーガーボタン -->
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    </button>
+    <!-- ホームへ戻るリンク。ブランドロゴなどを置く。 -->
+    <a class="navbar-brand" href="/top">おとぷろ</a>
   </div>
-</div>
+  <!-- メニュー項目 -->
+  <div id="navbar" class="collapse navbar-collapse otopuro">
+    <ul class="nav navbar-nav">
+    <li class="active"><a href="http://blog.livedoor.jp/otopuro_music/">おとぷろブログ</a></li>
+    <% unless session[:user] %>
+    <li><a href="/signup">新規登録</a></li>
+    <li><a href="/signin">ログイン</a></li>
+    <% else %>
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">マイページ<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+      <li><a href="/answers">質問一覧</a></li>
+      <li><a href="/signout">ログアウト</a></li>
+      </ul>
+    </li>
+    <% end %>
+    <li><a href="/information">お問い合わせ</a></li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+  <% if !@posts.empty? %>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.question %></td>
+        <td><%= post.category %></td>
+        <td><%= post.softname %></td>
+      </tr>
+    <% end %>
+    <% else %>
+      <p>質問はありません</p>
+    <% end %>
+</body>

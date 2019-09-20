@@ -5,7 +5,7 @@ class CreatePosts < ActiveRecord::Migration[5.2]
       t.string :question
       t.string :category
       t.string :softname
-      t.timestamps null false
+      t.timestamps null: false
     end
   end
 end
