@@ -1,7 +1,3 @@
-<style>
-  @import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap');
-</style>
-
 @font-face {
 	font-family: 'waon';
     src: url('/assets/font/WaonJoyo-R.otf');
@@ -11,8 +7,12 @@ body{
   background-color: #e0ffff; font-family: "waon";
 }
 
+.css-normal{font-language-override: 'normal';}
+
 form{
-  background-color: #e0ffff; font-size: 20px; text-align: center; font-family: "waon";
+  background-color: #e0ffff;
+  font-size: 20px; text-align: center;
+  font-family: 'arial unicode ms';
 }
 
 .panel {
@@ -21,10 +21,12 @@ form{
   box-shadow: none;
 }
 
+/* .css-normal{font-language-override: 'normal';} */
+
 textarea {
   width: 50%;
   margin-top: 10px;
-  font-family :'M PLUS Rounded 1c'
+  font-family: 'arial unicode ms';
 }
 
 .form-group {

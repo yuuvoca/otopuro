@@ -1,7 +1,3 @@
-<style>
-  @import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap');
-</style>
-
 @font-face {
 	font-family: 'waon';
     src: url('/assets/font/WaonJoyo-R.otf');
@@ -14,8 +10,12 @@ body{
 #navbar{
   color: #e0ffff;
 }
+
+.css-normal{font-language-override: 'normal';}
+
 #form{
   background-color: #ffffff;
+  /* font-family: 'arial unicode ms'; */
 }
 
 .table > tbody > tr > td {
@@ -47,11 +47,13 @@ select {
   line-height: inherit;
 }
 
-.question {
-  font-size : 15px;
-  margin : 15px　5px　15px　5px;
+/* .css-normal{font-language-override: 'normal';} */
+
+textarea {
+  font-size: 15px;
+  margin : 15px 5px 15px 5px;
   width: 100%;
-  font-family :'M PLUS Rounded 1c'
+  font-family: 'arial unicode ms';
 }
 
 @media (min-width: 768px) {
