@@ -4,7 +4,7 @@
 }
 
 body{
-  background-color: #e0ffff;
+  background: url(/assets/photo/img_3137.png);
   font-family: "waon";
 }
 #navbar{
@@ -109,4 +109,8 @@ select {
     color: #000000;
     background-color: #ffffff;
     border-color: #aebac5;
+}
+
+.navbar-brand > img {
+    margin-top: -8px;
 }
